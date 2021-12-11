@@ -15,6 +15,7 @@ public class TestSimulatorBasics {
 
 	@Test
 	// Class exists
+	// PASSED
 	public void testSimulatorClassExists() {
 		try {
 	        Class.forName("Simulator");
@@ -26,6 +27,7 @@ public class TestSimulatorBasics {
 	
 	@Test
 	// Only builtin constructor exists with no parameters
+	// PASSED
 	public void testSimulatorConstructorExists() {
 		Constructor list[] = Simulator.class.getConstructors();  // get all constructors
 		if (list.length > 1)
@@ -34,6 +36,7 @@ public class TestSimulatorBasics {
 	}
 
 	@Test
+	// PASSED
 	// Check that Simulator has the required methods:
 	//    public int Simulator.getStopsFromUser()  
 	public void testGetStopsFromUserExists()
@@ -51,6 +54,7 @@ public class TestSimulatorBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Simulator has the required methods:
 	//    public File Simulator.getInputFile()  
 	public void testGetInputFileExists()
@@ -68,6 +72,7 @@ public class TestSimulatorBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Simulator has the required methods:
 	//    public ArrayList<Customer> Simulator.checkFile(int stops, File file)  
 	public void testCheckFileExists()
@@ -85,6 +90,7 @@ public class TestSimulatorBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Simulator has the required methods:
 	//    public void Simulator.run(int,ArrayList<Customer>)  
 	public void testRunExists()
@@ -102,6 +108,7 @@ public class TestSimulatorBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Simulator has the required methods:
 	//    public static void Simulator.main(String[])  
 	public void testMainExists()
@@ -119,6 +126,7 @@ public class TestSimulatorBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Simulator only has the required 5 methods 
 	public void testMethodsOnlyFive()
 	{

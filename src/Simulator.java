@@ -1,8 +1,7 @@
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Simulator {
@@ -28,6 +27,9 @@ public class Simulator {
                 if(stops > 1){
                     numbergiven = true;
                 }
+                else{
+                    throw new Exception();
+                }
             } catch(Exception e){
                 System.out.println("Invalid input, try again");
             }
@@ -41,16 +43,23 @@ public class Simulator {
         Scanner sc = new Scanner(System.in);
         // default path for the file
         String defaultPath = "C:/train/customer-data.txt";
+        String defaultMacPath = "/Users/bydepa/Projects/src/customer-data.txt";
         // prompt the user for the path of the file that will be used as input data for customers
         // set a boolean for the while loop
         boolean validFile = false;
         while(!validFile){
             System.out.println("Enter absolute path for data file or for default (" + defaultPath + ") press Enter:");
             try{
-                String path = sc.next();
+                String path = sc.nextLine();
                 if( path == null || path.equalsIgnoreCase("")){
-                    File data = new File(defaultPath);
-                    return data;
+                    File data = new File(defaultMacPath);
+                    if (data.exists()){
+                        return data;
+                    }
+                    else{
+                        throw new Exception();
+                    }
+
                 }
                 else{
                     File data = new File(path);
@@ -76,12 +85,43 @@ public class Simulator {
         try {
             fileInput = new Scanner(new FileReader(file));
             while(fileInput.hasNextLine()){
-                Arrays.stream(fileInput.nextLine().trim().split("\\s+")).toArray();
+                try{
+                    String s = fileInput.nextLine();
+                    String[] tokens = s.split("[\\s+]");
+                    if(!(tokens.length == 4)){
+                        throw new InvalidParameterException();
+                    }
+                    int cust_id = Integer.parseInt(tokens[0]);
+                    int arrive_time = Integer.parseInt(tokens[1]);
+                    int enter_stop = Integer.parseInt(tokens[2]);
+                    int exit_stop = Integer.parseInt(tokens[3]);
+                    if ((cust_id < 1 || arrive_time < 0 || (enter_stop > 0 && enter_stop <= stops)||
+                            (exit_stop > 0 && exit_stop <= stops)) && (enter_stop == exit_stop) )
+                        throw new Exception();
+                    else{
+                        Customer temp = new Customer(cust_id, arrive_time, enter_stop, exit_stop);
+                        if (list.contains(temp)){
+                            throw new Exception();
+                        }
+                        else{
+                            list.add(temp);
+                        }
+                    }
+
+                }catch (InvalidParameterException e){
+                    System.out.println("Each line must have four Integers. Try again.");
+                    return null;
+                }
+                catch (Exception e){
+                    System.out.println("Data in input file is not correct. Try again.");
+                    return null;
+                }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Data in input file is not correct. Try again.");
+            return null;
         }
 
-        return null;
+        return list;
     }
 }

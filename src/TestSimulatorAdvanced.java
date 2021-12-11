@@ -39,6 +39,7 @@ public class TestSimulatorAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Check that get correct prompt from method getStopsFromUser   
 	public  void testgetStopsFromUserPrompt()
 	{
@@ -53,6 +54,7 @@ public class TestSimulatorAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that 0 is caught as invalid input and user gets re-prompted
 	public  void testgetStopsFromUserPromptLoop()
 	{
@@ -69,6 +71,7 @@ public class TestSimulatorAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that non-integer is caught as invalid input and user gets re-prompted
 	public  void testgetStopsFromUserPromptLoop2()
 	{
@@ -86,6 +89,7 @@ public class TestSimulatorAdvanced {
 	
 	
 	@Test
+	// PASSED
 	// Test that there are two prompts on invalid input
 	public  void testgetStopsFromUserPromptDouble()
 	{
@@ -103,6 +107,7 @@ public class TestSimulatorAdvanced {
 	}
 
 	@Test
+	//PASSED
 	// Test that if user presses enter and file not exists, he gets error message
 	// MUST NOT HAVE customer file at C:/train/customer-data.txt
 	// MUST have src/customer file
@@ -121,6 +126,7 @@ public class TestSimulatorAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that there is correct prompt for file and enter expects that file
 	// MUST HAVE customer file at C:/train/customer-data.txt 
 	// If file does not exists, the test will fail with java.util.NoSuchElementException: No line found
@@ -139,6 +145,7 @@ public class TestSimulatorAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that if user presses enter and file not exists, he gets error message
 	// MUST have src/customer file
 	public  void testgetInputFileNotExist()
@@ -156,6 +163,7 @@ public class TestSimulatorAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that if user presses enter and file not exists, there will be multiple prompts
 	// MUST have src/customer file
 	public  void testgetInputFilePromptLoop()
