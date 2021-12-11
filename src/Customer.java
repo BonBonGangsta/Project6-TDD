@@ -18,7 +18,7 @@ public class Customer {
 
     public Customer(int custId, int arrivalTime, int enterStop, int exitStop){
         if(custId < 1){ throw new IllegalArgumentException();}else{this.id = custId;}
-        if(arrivalTime <= 1){throw new IllegalArgumentException();}else {this.arrival = arrivalTime;}
+        if(arrivalTime < 1){throw new IllegalArgumentException();}else {this.arrival = arrivalTime;}
         if(enterStop <= 0){throw new IllegalArgumentException();}else{this.enter = enterStop;}
         if(exitStop <= 0){throw new IllegalArgumentException();}else{this.exit = exitStop;}
         this.status = 0;
@@ -45,7 +45,7 @@ public class Customer {
     }
 
     public void setStatus(int newStat){
-        if(newStat <CUST_NOT_PROCESSED || newStat > CUST_EXITED ){
+        if(newStat < CUST_NOT_PROCESSED || newStat > CUST_EXITED ){
             throw new IllegalArgumentException();
         }
         this.status = newStat;
