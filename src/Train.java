@@ -6,15 +6,15 @@ public class Train {
         madeStops - used to store number of stops the train made to process all customers.
         currTime - Used to store the time for the train made to process all customers.
      */
-    int stops, madeStops, currTime;
-    ArrayList<Customer> custList; // used to store list of customers to process in the simulation.
+    private int stops, madeStops, currTime = 0;
+    private ArrayList<Customer> custList; // used to store list of customers to process in the simulation.
 
     /**
      * Constructor to pass values of stops and customer list from Simulator and to initialize Train's attributes
      * @param numberOfStops Number of total stops
      * @param customers array list of Customers
      */
-    Train(int numberOfStops, ArrayList<Customer> customers){
+    public Train(int numberOfStops, ArrayList<Customer> customers){
         this.stops = numberOfStops;
         this.madeStops = this.currTime = 0;
         this.custList = customers;
@@ -80,6 +80,6 @@ public class Train {
     }
 
     public void displayStops(){
-        System.out.printf("Train made %d stops and it took %d time units to process all customers/n",this.madeStops, this.currTime);
+        System.out.printf("Train made %d stops and it took %d time units to process all customers\n",this.madeStops, this.currTime);
     }
 }

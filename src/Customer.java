@@ -2,9 +2,9 @@ public class Customer {
     /*
         Constants
      */
-    static final int CUST_NOT_PROCESSED = 0; // means that the customer has not been processed yet.
-    static final int CUST_ENTERED = 1; // means customer entered the train.
-    static final int CUST_EXITED = 2; // means the customer exited the train and is done processing.
+    public static final int CUST_NOT_PROCESSED = 0; // means that the customer has not been processed yet.
+    public static final int CUST_ENTERED = 1; // means customer entered the train.
+    public static final int CUST_EXITED = 2; // means the customer exited the train and is done processing.
 
     /*
         Attributes
@@ -14,13 +14,13 @@ public class Customer {
         exit - stop in which the customer will exit the train
         status - track customer's status using the constants above
      */
-    int id, arrival, enter, exit, status;
+    private int id, arrival, enter, exit, status;
 
-    Customer(int custId, int arrivalTime, int enterStop, int exitStop){
-        this.id = custId;
-        this.arrival = arrivalTime;
-        this.enter = enterStop;
-        this.exit = exitStop;
+    public Customer(int custId, int arrivalTime, int enterStop, int exitStop){
+        if(custId < 1){ throw new IllegalArgumentException();}else{this.id = custId;}
+        if(arrivalTime <= 1){throw new IllegalArgumentException();}else {this.arrival = arrivalTime;}
+        if(enterStop <= 0){throw new IllegalArgumentException();}else{this.enter = enterStop;}
+        if(exitStop <= 0){throw new IllegalArgumentException();}else{this.exit = exitStop;}
         this.status = 0;
     }
 
@@ -45,6 +45,9 @@ public class Customer {
     }
 
     public void setStatus(int newStat){
+        if(newStat <CUST_NOT_PROCESSED || newStat > CUST_EXITED ){
+            throw new IllegalArgumentException();
+        }
         this.status = newStat;
     }
 

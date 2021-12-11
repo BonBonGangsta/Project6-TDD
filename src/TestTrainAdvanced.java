@@ -1,12 +1,13 @@
-import static org.junit.Assert.*;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 
 public class TestTrainAdvanced {
@@ -31,6 +32,7 @@ public class TestTrainAdvanced {
 	}
 
 	@Test
+	// PASSED
 	// Test that constructor does not fail when called
 	public void testConstructor() {
 		int stops = 5;
@@ -40,6 +42,7 @@ public class TestTrainAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that displayStops() prints current values of madeStops and time
 	// Before simulation runs they should be both 0
 	public void testDisplayStops() {
@@ -53,6 +56,7 @@ public class TestTrainAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that constructor updates stops and custList attribute correctly
 	// As there is no get method for it, we test it indirectly through simulate
 	// We create a customer for that stop and if output is as expected, we know attributes were initialized
@@ -85,6 +89,7 @@ public class TestTrainAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that displayStops method uses the attribute values
 	// As there is no get method for it, we test it indirectly through simulate
 	public void testDisplayStopsAfterSimulate() {

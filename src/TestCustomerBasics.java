@@ -14,6 +14,7 @@ import static org.junit.Assert.fail;
 public class TestCustomerBasics {
 
 	@Test
+	// PASSED
 	// Check that there is a class Customer
 	public void testCustomerClassExists() {
 	    try {
@@ -25,6 +26,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Constructor exists: public Customer(int,int,int,int)
 	public void testCustomerConstructorExists()
 	{
@@ -41,6 +43,7 @@ public class TestCustomerBasics {
  	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has the required attribute: 
 	//     private int Customer.id
 	public void testAttributeId()
@@ -56,9 +59,10 @@ public class TestCustomerBasics {
 		if (!found)
 			fail("Customer class should have a private id attribute of type integer");
 	}
-	
+
 	@Test
-	// Check that Customer has the required attribute: 
+	// PASSED
+	// Check that Customer has the required attribute:
 	//     private int Customer.arrival
 	public void testAttributeArrival()
 	{
@@ -75,6 +79,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has the required attribute: 
 	//     private int Customer.enter
 	public void testAttributeEnter()
@@ -92,6 +97,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has the required attribute: 
 	//     private int Customer.exit
 	public void testAttributeExit()
@@ -109,6 +115,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has the required attribute: 
 	//     private int Customer.status
 	public void testAttributeStatus()
@@ -126,6 +133,7 @@ public class TestCustomerBasics {
 	}	
 
 	@Test
+	// PASSED
 	// Check that Customer has constant called  CUST_NOT_PROCESSED and set to 0
 	public void testConstantCUST_NOT_PROCESSED()
 	{
@@ -143,6 +151,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has constant called  CUST_ENTERED and set to 1
 	public void testConstantCUST_ENTERED()
 	{
@@ -160,6 +169,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has constant called  CUST_EXITED and set to 2
 	public void testConstantCUST_EXITED()
 	{
@@ -177,6 +187,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer only has the 5 required attributes and 3 constants: 
 	public void testAttributeOnlyEight()
 	{
@@ -186,6 +197,7 @@ public class TestCustomerBasics {
 	}	
 
 	@Test
+	// PASSED
 	// Check that Customer has the required methods:
 	//    public int Customer.getId()  
 	public void testMethodGetId()
@@ -203,6 +215,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has the required methods:
 	//    public int Customer.getEnter()  
 	public void testMethodGetEnter()
@@ -220,6 +233,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has the required methods:
 	//    public int Customer.getExit()  
 	public void testMethodGetExit()
@@ -237,6 +251,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has the required methods:
 	//    public int Customer.getArrival()  
 	public void testMethodGetArrival()
@@ -254,6 +269,7 @@ public class TestCustomerBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Customer has the required methods:
 	//    public int Customer.getStatus()  
 	public void testMethodGetStatus()
@@ -271,6 +287,7 @@ public class TestCustomerBasics {
 	}
 
 	@Test
+	// PASSED
 	// Check that Customer has the required methods:
 	//    public int Customer.setStatus(int)  
 	public void testMethodSetStatus()
@@ -287,6 +304,7 @@ public class TestCustomerBasics {
 			fail("Customer class should have a public method called setStatus with integer parameter");
 	}	
 	@Test
+	// PASSED
 	// Check that Customer only has the required 6 methods 
 	public void testMethodsOnlySix()
 	{

@@ -11,6 +11,7 @@ import static org.junit.Assert.*;
 public class TestCustomerAdvanced {
 
 	@Test
+	// PASSED
 	// Test that constructor correctly updates the attributes and get method returns it:
 	//     attribute Id
 	public void testConstructorAttributeId() {
@@ -24,6 +25,7 @@ public class TestCustomerAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that constructor correctly updates the attributes and get method returns it:
 	//     attribute arrival
 	public void testConstructorAttributeArrival() {
@@ -37,6 +39,7 @@ public class TestCustomerAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that constructor correctly updates the attributes and get method returns it:
 	//     attribute enterStop
 	public void testConstructorAttributeEnter() {
@@ -50,6 +53,7 @@ public class TestCustomerAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that constructor correctly updates the attributes and get method returns it:
 	//     attribute exit
 	public void testConstructorAttributeExit() {
@@ -63,6 +67,7 @@ public class TestCustomerAdvanced {
 	}	 
 	
 	@Test
+	// PASSED
 	// Test that constructor correctly updates the attributes and get method returns it:
 	//     attribute status
 	public void testConstructorAttributeStatus() {
@@ -76,6 +81,7 @@ public class TestCustomerAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// Test that setStatus correctly updates the attributes and get method returns it:
 	//     attribute status set to CUST_ENTERED
 	public void testConstructorMethodSetStatusValue1() {
@@ -90,6 +96,7 @@ public class TestCustomerAdvanced {
 	}
 
 	@Test
+	// PASSED
 	// Test that setStatus correctly updates the attributes and get method returns it:
 	//     attribute status set to CUST_EXITED
 	public void testConstructorMethodSetStatusValue2() {
@@ -104,6 +111,7 @@ public class TestCustomerAdvanced {
 	}	
 	
 	@Test
+	// PASSED
 	// test that if id attribute is negative throws IllegalArgumentException
 	public void testIdNegativeValue()
 	{
@@ -122,6 +130,7 @@ public class TestCustomerAdvanced {
 		}
 	}
 	@Test
+	// PASSED
 	// test that if id attribute is zero throws IllegalArgumentException
 	public void testIdZeroValue()
 	{
@@ -141,6 +150,7 @@ public class TestCustomerAdvanced {
 	}	
 
 	@Test
+	// PASSED
 	// test that if arrival attribute is negative throws IllegalArgumentException
 	public void testArrivalNegativeValue()
 	{
@@ -159,6 +169,7 @@ public class TestCustomerAdvanced {
 		}
 	}
 	@Test
+	// PASSED
 	// test that if arrival attribute is zero throws IllegalArgumentException
 	public void testArrivalZeroValue()
 	{
@@ -178,6 +189,7 @@ public class TestCustomerAdvanced {
 	}
 	
 	@Test
+	// PASSED
 	// test that if enter attribute is negative throws IllegalArgumentException
 	public void testEnterNegativeValue()
 	{
@@ -196,6 +208,7 @@ public class TestCustomerAdvanced {
 		}
 	}
 	@Test
+	// PASSED
 	// test that if enter attribute is zero throws IllegalArgumentException
 	public void testEnterZeroValue()
 	{
@@ -215,6 +228,7 @@ public class TestCustomerAdvanced {
 	}	
 
 	@Test
+	// PASSED
 	// test that if exit attribute is negative throws IllegalArgumentException
 	public void testExitNegativeValue()
 	{
@@ -233,6 +247,7 @@ public class TestCustomerAdvanced {
 		}
 	}
 	@Test
+	// PASSED
 	// test that if exit attribute is zero throws IllegalArgumentException
 	public void testExitZeroValue()
 	{
@@ -252,6 +267,7 @@ public class TestCustomerAdvanced {
 	}	
 	
 	@Test
+	// PASSED
 	// test that if status attribute is something other than one of the constants it throws IllegalArgumentException
 	public void testStatusInvalidLess()
 	{
@@ -272,6 +288,7 @@ public class TestCustomerAdvanced {
 	}	
 	
 	@Test
+	// PASSED
 	// test that if status attribute is something other than one of the constants it throws IllegalArgumentException
 	public void testStatusInvalidHigher()
 	{

@@ -1,10 +1,10 @@
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import org.junit.Test;
+import static org.junit.Assert.fail;
 
 /*
  * Author: Renata Rand McFadden
@@ -14,6 +14,7 @@ import org.junit.Test;
 public class TestTrainBasics {
 
 	@Test
+	// PASSED
 	// Check that there is a class Train
 	public void testCustomerClassExists() {
 	    try {
@@ -25,6 +26,7 @@ public class TestTrainBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Constructor exists: public Customer(int,int,int,int)
 	public void testTrainConstructorExists()
 	{
@@ -41,6 +43,7 @@ public class TestTrainBasics {
  	}
 	
 	@Test
+	// PASSED
 	// Check that Train has the required attribute: 
 	//     private ArrayList<Customer> Train.custList
 	public void testAttributeCustList()
@@ -58,6 +61,7 @@ public class TestTrainBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Train has the required attribute: 
 	//     private int Customer.stops
 	public void testAttributeStops()
@@ -75,6 +79,7 @@ public class TestTrainBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Train has the required attribute: 
 	//     private int Train.madeStops
 	public void testAttributeMadeStops()
@@ -92,6 +97,7 @@ public class TestTrainBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Train has the required attribute: 
 	//     private int Train.currTime
 	public void testAttributeCurrTime()
@@ -109,6 +115,7 @@ public class TestTrainBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Train only has the 4 required attributes: 
 	public void testAttributeOnlyFour()
 	{
@@ -118,6 +125,7 @@ public class TestTrainBasics {
 	}	
 
 	@Test
+	// PASSED
 	// Check that Train has the required methods:
 	//    public void Train.simulate()  
 	public void testMethodSimulate()
@@ -135,6 +143,7 @@ public class TestTrainBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Train has the required methods:
 	//    public void Train.displayStops()  
 	public void testDisplayStops()
@@ -152,6 +161,7 @@ public class TestTrainBasics {
 	}
 	
 	@Test
+	// PASSED
 	// Check that Train only has the required 3 methods 
 	public void testMethodsOnlySix()
 	{
